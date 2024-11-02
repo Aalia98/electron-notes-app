@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electron Notes App</title>
+  <style>
+    /* Basic styling for layout */
+    body {
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    #sidebar {
+      width: 30%;
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-right: 1px solid #ccc;
+    }
+    #content {
+      width: 70%;
+      padding: 10px;
+    }
+    #note-list {
+      list-style: none;
+      padding: 0;
+    }
+    #note-list li {
+      cursor: pointer;
+      padding: 5px;
+      border-bottom: 1px solid #ddd;
+    }
+    #note-list li:hover {
+      background-color: #efefef;
+    }
+  </style>
+</head>
+<body>
+  <div id="sidebar">
+    <h3>Notes</h3>
+    <ul id="note-list"></ul>
+  </div>
+  <div id="content">
+    <textarea id="note-content" rows="15" style="width: 100%;"></textarea>
+    <button id="save-note">Save</button>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
